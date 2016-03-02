@@ -5,9 +5,8 @@ defmodule StatHat do
   def start(_type, _args) do
     import Supervisor.Spec, warn: false
     ez_key = Application.get_env(:stathat, :ez_key)
-    Logger.debug "Using StatHat ez_key: #{ez_key}"
     children = [
-      worker(StatHat.Server, [ez_key: ez_key])
+      worker(StatHat.Server, [[ez_key: ez_key]])
     ]
     opts = [strategy: :one_for_one, name: StatHat.Supervisor]
     Supervisor.start_link(children, opts)

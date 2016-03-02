@@ -11,7 +11,7 @@ defmodule StatHat.Server do
     {:ok, state}
   end
   
-  def handle_cast({:ez_count, stat, count}, state) do
+  def handle_cast({:ez_count, stat, count}, state) do    
     url = build_url("ez", [{"ezkey", state[:ez_key]}, {"stat", stat}, {"count", to_s(count)}])
     send_request(url)
     {:noreply, state}

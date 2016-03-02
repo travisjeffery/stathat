@@ -3,7 +3,7 @@ defmodule Stathat.Mixfile do
 
   def project do
     [app: :stathat,
-     version: "0.0.1",
+     version: "0.0.3",
      elixir: "~> 1.2",
      package: package,
      description: "StatHat client library.",
