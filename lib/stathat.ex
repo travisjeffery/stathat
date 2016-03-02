@@ -1,9 +1,11 @@
 defmodule StatHat do
   use Application
+  require Logger
 
   def start(_type, _args) do
     import Supervisor.Spec, warn: false
     ez_key = Application.get_env(:stathat, :ez_key)
+    Logger.debug "Using StatHat ez_key: #{ez_key}"
     children = [
       worker(StatHat.Server, [ez_key: ez_key])
     ]
