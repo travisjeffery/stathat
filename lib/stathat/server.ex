@@ -34,7 +34,7 @@ defmodule StatHat.Server do
   defp build_url(url, []), do: url
   
   defp build_url(url, args) do
-    args = Stream.map(args, fn({k,v}) -> k <> "=" <> v end) |> Enum.join "&"
+    args = Stream.map(args, fn({k,v}) -> k <> "=" <> v end) |> Enum.join("&")
     @stathat_url <> url <> "?" <> args |> URI.encode |> :erlang.binary_to_list
   end
 end

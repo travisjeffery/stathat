@@ -12,10 +12,16 @@ defmodule StatHat do
     Supervisor.start_link(children, opts)
   end
 
+  @doc """
+  Count the stat.
+  """
   def ez_count(stat, count) do
     GenServer.cast(StatHat, {:ez_count, stat, count})
   end
 
+  @doc """
+  Track the stat with the given value.
+  """
   def ez_value(stat, value) do
     GenServer.cast(StatHat, {:ez_value, stat, value})
   end
