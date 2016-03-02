@@ -39,8 +39,7 @@ defmodule Stathat.Mixfile do
       files: ["lib", "mix.exs", "README*", "LICENSE*"],
       maintainers: ["Travis Jeffery"],
       licenses: ["MIT"],
-      links: %{"GitHub" => "https://github.com/travisjeffery/stathat",
-               "Docs" => "http://travisjeffery.github.io/stathat/"}
+      links: %{"GitHub" => "https://github.com/travisjeffery/stathat"}
     ]
   end
 end
