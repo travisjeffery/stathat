@@ -1,10 +1,10 @@
 # Stathat
 
-**TODO: Add description**
+StatHat client library for Elixir.
 
 ## Installation
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed as:
+The package can be installed as:
 
   1. Add stathat to your list of dependencies in `mix.exs`:
 
@@ -17,4 +17,8 @@ If [available in Hex](https://hex.pm/docs/publish), the package can be installed
         def application do
           [applications: [:stathat]]
         end
+
+## License
+
+MIT
 
