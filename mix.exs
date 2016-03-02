@@ -5,6 +5,9 @@ defmodule Stathat.Mixfile do
     [app: :stathat,
      version: "0.0.1",
      elixir: "~> 1.2",
+     maintainers: ["Travis Jeffery"],
+     description: "StatHat client library.",
+     licenses: ["MIT"],
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
      deps: deps]
